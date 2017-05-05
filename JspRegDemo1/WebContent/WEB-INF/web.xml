@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JspRegDemo1</display-name>
+  <welcome-file-list>
+    <welcome-file>user_reg.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>LoginEmployee</display-name>
+    <servlet-name>LoginEmployee</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.LoginEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginEmployee</servlet-name>
+    <url-pattern>/loginemp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterEmployee</display-name>
+    <servlet-name>RegisterEmployee</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.RegisterEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterEmployee</servlet-name>
+    <url-pattern>/RegisterEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AgeWisedisplayEmployee</display-name>
+    <servlet-name>AgeWisedisplayEmployee</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.EmployeeDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AgeWisedisplayEmployee</servlet-name>
+    <url-pattern>/employeeDetails</url-pattern>
+  </servlet-mapping>
+</web-app>
