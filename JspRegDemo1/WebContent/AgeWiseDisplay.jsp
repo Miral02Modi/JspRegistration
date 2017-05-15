@@ -27,23 +27,23 @@
 	<br>
 	<table class="table" border=1>
 		<%
-			int count = 1;
+			/* int count = 1;
 			ResultSet resultSet = (ResultSet) request.getAttribute("EmployeeInformation");
 
 			while (resultSet.next()) {
 				if (count % 2 == 1) {
 					out.println("<tr class='success'>");
-					for (int i = 1; i != 11; i++)
+					for (int i = 1; i < 10; i++)
 						out.println("<td>" + resultSet.getString(i) + "</td>");
 					out.println("</tr>");
 				} else {
 					out.println("<tr class='danger'>");
-					for (int i = 1; i != 11; i++)
+					for (int i = 1; i < 10; i++)
 						out.println("<td>" + resultSet.getString(i) + "</td>");
 					out.println("</tr>");
 				}
 				count++;
-			}
+			} */
 		%>
 	</table>
 </body>

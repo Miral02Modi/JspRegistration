@@ -11,7 +11,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
+<style>
 body {
 	background: #eee !important;
 }
@@ -39,7 +39,7 @@ body {
 	font-weight: normal;
 }
 
-.form-control {
+/* .form-control {
 	position: relative;
 	font-size: 16px;
 	height: auto;
@@ -53,9 +53,22 @@ body {
 	z-index
 	:
 	2;
+} */
+.form-signin .form-control:focus {
+	z-index: 2;
 }
 
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 8px;
 }
+
 input[type="text"] {
 	margin-bottom: -1px;
 	border-bottom-left-radius: 0;
@@ -111,21 +124,19 @@ input[type="password"] {
 </script>
 </head>
 <body>
-
 	<div class="wrapper">
-		<form class="form-signin" action="loginemp" method="post"
+		<form class="form-signin" action="userregi" method="post"
 			onsubmit="return validForm()">
-			<h2 class="form-signin-heading">Please login</h2>
+			<h2 class="form-signin-heading">User Register</h2>
 			<br> Email <input type="text" class="form-control" name="Email"
-				id="email" placeholder="Email Address" onblur="validEmailId()"
-				autofocus="" />
+				id="email" placeholder="Email Address" onblur="validEmailId()" />
 			<p id="p1" style="color: red"></p>
-			<br>Password <input type="password" class="form-control"
+			 <br>Password <input type="password" class="form-control"
 				onblur="return validPassword()" name="password" id="Password"
 				placeholder="Password" />
 			<p id="p2" style="color: red"></p>
-			<br>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+			<a href="UserLogin.jsp" style="text-decoration: none"><button
+					class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
 		</form>
 	</div>
 </body>
