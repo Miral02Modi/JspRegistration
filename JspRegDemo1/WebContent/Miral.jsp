@@ -8,6 +8,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Insert title here</title>
 <link
 	href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
@@ -26,6 +28,11 @@
 <script
 	src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <style>
+.ui-mobile .ui-page {
+	min-height: 300px;
+	background-color: #bac9d6;
+}
+
 .h4, h4 {
 	text-align: center;
 	font-size: 18px;
@@ -92,6 +99,10 @@ input[type="password"] {
 	border-top-right-radius: 0;
 }
 } */
+.container {
+	width: 100%;
+	background-color: #519ad6;
+}
 </style>
 
 <script type="text/javascript">
@@ -203,12 +214,20 @@ input[type="password"] {
 
 </head>
 <body>
-<body>
+<body style="background-color: #bac9d6;">
 
-	<div data-role="main" class="ui-content">
+	<div class="container">
+		<div class="page-header">
+			<h1 style="font-size: 54px; color: white; padding-left: 6%;">Employee
+				Details</h1>
+		</div>
+	</div>
+
+	<div data-role="main" class="ui-content"
+		style="background-color: #bac9d6;">
 
 		<table class="table"
-			style="margin-top: 9%; margin-left: 20%; width: 60%">
+			style="margin-top: 9%; margin-left: 20%; width: 60%; box-shadow: 0 0 20px 0 rgba(20, 30, 0, 0.2), 20px 20px 20px 20px rgba(0, 0, 0, 0.24);">
 
 			<%
 				LinkedList linkedList = (LinkedList) request.getAttribute("EmployeeInformation");
@@ -239,11 +258,10 @@ input[type="password"] {
 					specialized = employee.getSpecialized();
 
 					System.out.println("age" + age);
-
-					if (count % 2 == 1) {
 			%>
+
 			<%
-				if (count == 1) {
+				if (index == 1) {
 			%>
 			<thead
 				style="background: #337ab7; text-shadow: text-shadow: 2px 2px 5px white; color: white;">
@@ -255,6 +273,9 @@ input[type="password"] {
 			</thead>
 			<%
 				}
+			%>
+			<%
+				if (count % 2 == 1) {
 			%>
 			<tr class="info">
 				<td style="color: black;"><%=index++%></td>
@@ -273,14 +294,15 @@ input[type="password"] {
 				} else {
 			%>
 			<tr>
-				<td style="color: black;"><%=index++%></td>
-				<td><a href="#myPopup" data-toggle="modal"
-					data-target="#myModal" style="color: black;"
+				<td style="color: black; background-color: white;"><%=index++%></td>
+				<td style="background-color: white;"><a href="#myPopup"
+					data-toggle="modal" data-target="#myModal" style="color: black;"
 					onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=name%></a>
 				</td>
 
-				<td style="width: 1%;"><a href="#myPopup" data-toggle="modal"
-					data-target="#myModal" style="color: black;"
+				<td style="width: 1%; background-color: white;"><a
+					href="#myPopup" data-toggle="modal" data-target="#myModal"
+					style="color: black;"
 					onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=email%></a>
 				</td>
 			</tr>
@@ -388,7 +410,7 @@ input[type="password"] {
 		<div class="modal fade" id="myModal1" role="dialog">
 			<div class="modal-dialog">
 				<div id="DeleteDiv">
-						<button type="button" class="btn btn-default" data-dismiss="modal"
+					<button type="button" class="btn btn-default" data-dismiss="modal"
 						onclick="deleteData()" id="ok">OK</button>
 					<button type="button" class="btn btn-default" data-dismiss="modal"
 						id="close">Close</button>
