@@ -6,11 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
+<!-- <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	
+<link rel="stylesheet" type="text/css" href="css/EmployeeRegistration.css">	
+<!-- <style>
 body {
 	background: #eee !important;
 }
@@ -26,44 +28,29 @@ body {
 	margin: 0 auto;
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 40px 40px 0 rgba(0, 0, 0, 0.24);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 40px 40px 0
+		rgba(0, 0, 0, 0.24);
 }
 
 .form-signin-heading, .checkbox {
 	margin-bottom: 30px;
 }
 
-.form-control {
-	position: relative;
-	font-size: 16px;
-	height: auto;
-	padding: 10px;
-	@
-	include
-	box-sizing(border-box);
-	&:
-	focus
-	{
-	z-index
-	:
-	2;
-}
-}
- input[type="text"] {
+input[type="text"] {
 	margin-bottom: -1px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-input[type="password"] {	
+input[type="password"] {
 	margin-bottom: 20px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
-} 
 }
-</style>
-<script type="text/javascript">
-	function validForm() {
+}
+</style> -->
+<script src="js/EmployeeRegister.js" type="text/javascript">
+/* 	function validForm() {
 		var name = validName();
 		var email = validEmail();
 		var password = validPassword();
@@ -86,7 +73,8 @@ input[type="password"] {
 			document.getElementById("p1").innerHTML = "*Please enter a Name*";
 			return false;
 		} else {
-			document.getElementById("Name").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Name").style.borderColor = rgba(0, 0, 0,
+					.25);
 			document.getElementById("p1").innerHTML = "";
 			return true;
 		}
@@ -101,7 +89,8 @@ input[type="password"] {
 			document.getElementById("p2").innerHTML = "*Please enter a email*";
 			return false;
 		} else {
-			document.getElementById("email").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("email").style.borderColor = rgba(0, 0, 0,
+					.25);
 			document.getElementById("p2").innerHTML = "";
 			return true;
 		}
@@ -115,7 +104,8 @@ input[type="password"] {
 			document.getElementById("p3").innerHTML = "*Please enter a Password*";
 			return false;
 		} else {
-			document.getElementById("Password").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Password").style.borderColor = rgba(0, 0,
+					0, .25);
 			document.getElementById("p3").innerHTML = "";
 			return true;
 		}
@@ -129,7 +119,8 @@ input[type="password"] {
 			document.getElementById("p4").innerHTML = "*Please enter a Mobile Number*";
 			return false;
 		} else {
-			document.getElementById("Phone").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Phone").style.borderColor = rgba(0, 0, 0,
+					.25);
 			document.getElementById("p4").innerHTML = "";
 			return true;
 		}
@@ -144,7 +135,8 @@ input[type="password"] {
 			document.getElementById("p5").innerHTML = "*Please enter a Address*";
 			return false;
 		} else {
-			document.getElementById("Address").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Address").style.borderColor = rgba(0, 0,
+					0, .25);
 			document.getElementById("p5").innerHTML = "";
 			return true;
 		}
@@ -157,7 +149,8 @@ input[type="password"] {
 			document.getElementById("p6").innerHTML = "*Please enter a Company Name*";
 			return false;
 		} else {
-			document.getElementById("Cname").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Cname").style.borderColor = rgba(0, 0, 0,
+					.25);
 			document.getElementById("p6").innerHTML = "";
 			return true;
 		}
@@ -171,7 +164,8 @@ input[type="password"] {
 			document.getElementById("p7").innerHTML = "*Please enter a Age*";
 			return false;
 		} else {
-			document.getElementById("Age").style.borderColor = rgba(0,0,0,.25);
+			document.getElementById("Age").style.borderColor = rgba(0, 0, 0,
+					.25);
 			document.getElementById("p7").innerHTML = "";
 			return true;
 		}
@@ -179,14 +173,36 @@ input[type="password"] {
 
 	function make_blank() {
 		document.getElementById("Name").value = "";
-	}
+	} */
 </script>
-<title>Insert title here</title>
 </head>
+<title>Insert title here</title>
+
 <body>
-<!--  -->
+	<!--  -->
+	<%-- <jsp:include page="Header.jsp"></jsp:include> --%>
+	<div class="container">
+		<!-- <div class="navBar" id="fixed"> -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			
+			<div class="collapse navbar-collapse" id="myNavbar">
+				
+
+				<ul class="nav navbar-nav">
+				<li><a
+					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
+					class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
+					<li><a href="EmployeeDetailController"
+						style="float: left;">Employee Detail</a></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+	</div>
 	<div class="wrapper">
-		<form class="form-signin" name="reg" method="post" onsubmit="return validForm()">
+		<form class="form-signin" name="reg" method="post"
+			onsubmit="return validForm()">
 			<h2 class="form-signin-heading">Please Register</h2>
 			Name <input type="text" class="form-control" name="name"
 				placeholder="Name" id="Name" autofocus=""

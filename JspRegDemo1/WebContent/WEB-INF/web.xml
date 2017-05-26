@@ -2,21 +2,17 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>JspRegDemo1</display-name>
   <welcome-file-list>
-    <welcome-file>user_reg.jsp</welcome-file>
+    <welcome-file>LandingServlet</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>LoginEmployee</display-name>
     <servlet-name>LoginEmployee</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.LoginEmployee</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginEmployee</servlet-name>
-    <url-pattern>/loginemp</url-pattern>
+    <url-pattern>/loginemp1</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>RegisterEmployee</display-name>
     <servlet-name>RegisterEmployee</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.RegisterEmployee</servlet-class>
   </servlet>
@@ -25,8 +21,6 @@
     <url-pattern>/RegisterEmployee</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>AgeWisedisplayEmployee</display-name>
     <servlet-name>AgeWisedisplayEmployee</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.EmployeeDetails</servlet-class>
   </servlet>
@@ -35,8 +29,6 @@
     <url-pattern>/employeeDetails</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LogoutUser</display-name>
     <servlet-name>LogoutUser</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.LogoutUser</servlet-class>
   </servlet>
@@ -45,8 +37,6 @@
     <url-pattern>/LogoutUser</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>UserRegistration</display-name>
     <servlet-name>UserRegistration</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.LogoutUser</servlet-class>
   </servlet>
@@ -55,8 +45,6 @@
     <url-pattern>/user</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>UserRegistration1</display-name>
     <servlet-name>UserRegistration1</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.UserRegistration</servlet-class>
   </servlet>
@@ -65,8 +53,6 @@
     <url-pattern>/userregi</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>UserRegistrationController</display-name>
     <servlet-name>UserRegistrationController</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.controller.registerUserController</servlet-class>
   </servlet>
@@ -75,8 +61,6 @@
     <url-pattern>/userreg</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>registerUserController</display-name>
     <servlet-name>registerUserController</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.controller.registerUserController</servlet-class>
   </servlet>
@@ -85,8 +69,6 @@
     <url-pattern>/registerUserController</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>registerEmployeeController</display-name>
     <servlet-name>registerEmployeeController</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.controller.registerEmployeeController</servlet-class>
   </servlet>
@@ -108,8 +90,6 @@
     <url-pattern>/updateData</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>DeleteData1</display-name>
     <servlet-name>DeleteData1</servlet-name>
     <servlet-class>com.bridgeit.jspregistration.DeleteData1</servlet-class>
   </servlet>
@@ -117,4 +97,38 @@
     <servlet-name>DeleteData1</servlet-name>
     <url-pattern>/DeleteData</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>EmployeeLogin1</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.EmployeeLogin1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeLogin1</servlet-name>
+    <url-pattern>/EmployeeLogin1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmployeeDetailController</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.controller.EmployeeDetailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeDetailController</servlet-name>
+    <url-pattern>/EmployeeDetailController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LandingServlet</servlet-name>
+    <servlet-class>com.bridgeit.jspregistration.LandingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LandingServlet</servlet-name>
+    <url-pattern>/LandingServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>loginjsp</servlet-name>
+    <jsp-file>/user_reg.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginjsp</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+ 
 </web-app>

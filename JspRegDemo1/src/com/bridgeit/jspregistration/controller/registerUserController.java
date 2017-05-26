@@ -19,4 +19,9 @@ public class registerUserController extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("UserLogin.jsp");
 		dispatcher.include(request, response);
 	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("UserLogin.jsp");
+		dispatcher.include(request, response);
+	}
 }

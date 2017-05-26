@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,20 +20,10 @@ import javax.servlet.http.HttpServletResponse;
 public class UpdateData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public UpdateData() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("application/json");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String address = request.getParameter("address");
@@ -62,6 +53,10 @@ public class UpdateData extends HttpServlet {
 			preparedStatement.setString(7, lang);
 			preparedStatement.setString(8, special);
 			preparedStatement.executeUpdate();
+			 
+			/*RequestDispatcher dispatcher = request.getRequestDispatcher("employeeDetails");
+			dispatcher.include(request, response);*/
+			response.sendRedirect("employeeDetails");
 		} catch (Exception e) {
 			System.out.println(e);
 		}

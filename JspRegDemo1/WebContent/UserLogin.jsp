@@ -82,8 +82,8 @@ input[type="password"] {
 }
 }
 </style>
-<script type="text/javascript">
-	function validEmailId() {
+<script src="js/UserLogin.js" type="text/javascript">
+ /* function validEmailId() {
 		var email = document.getElementById('email').value;
 
 		if (email == "") {
@@ -120,18 +120,46 @@ input[type="password"] {
 			return true;
 		}
 		return false;
-	}
+	}  */
 </script>
 </head>
+
+
+
 <body>
+
+
+	<div class="container">
+		<!-- <div class="navBar" id="fixed"> -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a
+					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
+					class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a>
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+				</ul>
+			</div>
+		</div>
+		</nav>
+	</div>
+
 	<div class="wrapper">
 		<form class="form-signin" action="userregi" method="post"
 			onsubmit="return validForm()">
 			<h2 class="form-signin-heading">User Register</h2>
-			<br> Email <input type="text" class="form-control" name="Email"
+			<br> Email <input type="email" class="form-control" name="Email"
 				id="email" placeholder="Email Address" onblur="validEmailId()" />
 			<p id="p1" style="color: red"></p>
-			 <br>Password <input type="password" class="form-control"
+			<br>Password <input type="password" class="form-control"
 				onblur="return validPassword()" name="password" id="Password"
 				placeholder="Password" />
 			<p id="p2" style="color: red"></p>

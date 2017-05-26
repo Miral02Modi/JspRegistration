@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
@@ -85,7 +86,9 @@ public class RegisterEmployee extends HttpServlet {
 			language = language + i + ",";
 
 		HttpSession httpSession = request.getSession();
+
 		int uid = (Integer) httpSession.getAttribute("uid");
+		System.out.println("Miral Uid::" + uid);
 
 		System.out.println(strlang.length);
 		System.out.println(stremail + strAddress + strPhone + strCompnyName + strAge + strGender);
@@ -109,13 +112,20 @@ public class RegisterEmployee extends HttpServlet {
 			preparedStatement.setString(10, password);
 			preparedStatement.setInt(11, uid);
 			preparedStatement.executeUpdate();
-
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('data successfully inserted');");
+			out.println("location='user_reg.jsp';");
+			out.println("</script>");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("user_reg.jsp");
+		dispatcher.forward(request, response);*/
+		response.sendRedirect("employeeDetails");
+		
 	}
 
 	private static String htmlFilter(String message) {
@@ -144,7 +154,6 @@ public class RegisterEmployee extends HttpServlet {
 				result.append(aChar);
 			}
 		}
-		System.out.println(result.toString());
 		return (result.toString());
 	}
 }
