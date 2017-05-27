@@ -22,12 +22,11 @@
 
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <!-- <link rel="stylesheet" type="text/css" href="js/EmployeeDetails.css">	 -->
@@ -56,7 +55,7 @@
 	background-color: #f4a742;
 }
 
-/* .wrapper {
+.wrapper {
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
@@ -103,11 +102,12 @@ input[type="password"] {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
-} */
+
+}
 .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a
 	{
 	color: #38c;
-	/* font-weight: 700; */
+	font-weight: 700;
 }
 
 .container {
@@ -121,186 +121,6 @@ input[type="password"] {
 </style>
 
 <script src=js/EmployeeDetails.js type="text/javascript"></script>
-
-
-<script>
-	/* 	function bodyHide() {
-	 var x = document.getElementById('bodydata');
-	 if (x.style.display === 'none') {
-	 x.style.display = 'block';
-	 } else {
-	 x.style.display = 'none';
-	 }
-	 }
-
-
-	 var getData1 = function(name, email, address, mobile, cname, age, gender,
-	 languageKnown, specialized) {
-
-	 console.log(age);
-	 $("#updateDiv").hide();
-	 $("#DeleteDiv").hide();
-	 $("#myPopup").show();
-	 $("#delete").show();
-	 $("#btn1").show();
-	 $("#btn2").show();
-	 $("#submit").hide();
-	 $("#ok").hide()
-	 $("#close").hide()
-
-	 $("#myPopup").text(name, email, address);
-	 $("#myPopup").html(
-	
-	 "<table class=table style=border-radius:8px;>"
-
-	 + "<tr>" + "<th>" + "Employee Data" + "<th>" + "</tr>"
-
-	 + "<tr>" + "<td>" + "EmployeeName" + " </td>"
-	 + "<td>" + name + "</td>" + "</tr>" +
-
-	 "<tr>" + "<td>" + "Email Address"
-	 + " </td>" + "<td>" + email + "</td>" + "</tr>"
-	
-	 + "<tr>" + "<td>" + "Address" + "</td>"
-	 + "<td>" + address + "</td>" + "</tr>" 
-	
-	 + "<tr>" + "<td>" + "mobile" + "</td>"
-	 + "<td>" + mobile + "</td>" + "</tr>" 	
-	 + "<tr>" + "<td>" + "cname" + "</td>"
-	 + "<td>" + cname + "</td>" + "</tr>" 
-	 + "<tr>" + "<td>" + "age" + "</td>"
-	 + "<td>" + age + "</td>" + "</tr>" 
-	 + "<tr>" + "<td>" + "gender" + "</td>"
-	 + "<td>" + gender + "</td>" + "</tr>" 
-	 + "<tr>" + "<td>" + "languageKnown" + "</td>"
-	 + "<td>" + languageKnown + "</td>" + "</tr>" 
-	 + "<tr>" + "<td>" + "specialized" + "</td>"
-	 + "<td>" + specialized + "</td>" + "</tr>" 
-	 + "</table>"
-	
-	
-	 );
-
-	 $("#nam").val(name);
-	 $("#mail").val(email);
-	 $("#Address").val(address);
-	 $("#phone").val(mobile);
-	 $("#cname").val(cname);
-	 $("#age").val(age);
-	 $("#gender").val(gender);
-	 $("#language").val(languageKnown);
-	
-	 $("#special").val(specialized);
-
-	 };
-	
-	
-
-	 var updateData = function() {
-	 console.log('your message');
-	 $("#myPopup").hide();
-	 $("#updateDiv").show();
-	 $("#submit").show();
-	 $("#btn1").hide();
-	 $("#btn2").hide();
-	 $("#delete").hide();
-	 }
-
-	 var updateData1 = function() {
-
-	 var data = {};
-
-	 data.name = $("#nam").val();
-	 data.email = $("#mail").val();
-	 data.address = $("#Address").val();
-	 data.phone = $("#phone").val();
-	 data.cname = $("#cname").val();
-	 data.age = $("#age").val();
-	 data.gender = $("#gender").val();
-	 data.language = $("#language").val();
-	 data.special = $("#special").val();
-
-	 $.ajax({
-	 url : 'updateData',
-	 data : data,
-	 type : 'post',
-	 success : function(data) {
-	 //console.log(data);
-	 $("#bodyId").html(data);
-	 },
-	 error : function() {
-	 alert(error)
-	 }
-	 });
-	 }
-
-	 var deleteData = function() {
-	 var email;
-	 email = $("#mail").val();
-	 console.log(email);
-	 $.ajax({
-	 url : 'DeleteData',
-	 data : {
-	 "mail" : email
-	 },
-	 type : 'post',
-	 success : function(data) {
-	 console.log(data);
-	 },
-	 error : function() {
-	 alert("error Delete data");
-	 }
-	 });
-	 }
-
-	 var delete1 = function() {
-	 $("#DeleteDiv").show();
-	 $("#ok").show();
-	 $("#close").show();
-
-	 }
-
-	 function validMail() {
-	 var email = document.getElementById('mail').value;
-	
-	 var atpos = email.indexOf("@");
-	 var dotpos = email.lastIndexOf(".");
-	 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-	 alert("Not a valid e-mail address");
-	 return false;
-	 }
-	
-	 if (email == "") {
-	 //alert('Please Enter First Name');
-	 document.getElementById("p1").innerHTML = "*Please enter a email*";
-	 document.getElementById("email").style.borderColor = "red";
-	 return false;
-	 } 
-	
-	 else {
-	 document.getElementById("p1").innerHTML = "";
-	 document.getElementById("email").style.borderColor = "green";
-	 return true;
-	 }
-
-	 }
-	
-	
-	 function validPhone(){
-	 var number = document.getElementById('phone').value;
-	
-	 if(/^\d{10}$/.test(number)){
-	
-	 }else{
-	 alert("Invalid number; must be ten digits")
-	 number.focus()
-	 }
-	 }
-	
-
-	 */
-</script>
-
 </head>
 
 
@@ -376,7 +196,7 @@ input[type="password"] {
 	</div> -->
 
 	<div>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="height:1%">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -388,10 +208,11 @@ input[type="password"] {
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="registerEmployeeController">Register</a></li>
+						<li><a href="registerEmployeeController">Register</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+						<li><a href="login"><span
+								class="glyphicon glyphicon-user"></span>Logout</a></li>
 					</ul>
 				</div>
 			</div>
@@ -399,7 +220,7 @@ input[type="password"] {
 	</div>
 
 
-	<div class="container content" style="margin-top: 13%;">
+	<div class="container content" style="margin-top: 12%;">
 
 
 		<!-- data-role="main" -->
@@ -516,49 +337,52 @@ input[type="password"] {
 
 							<!-- update popup design -->
 
-							<div id="updateDiv" style="background-color: #ddd;">
+							<div class="container" id="updateDiv"
+								style="background-color: #ddd;">
 								<%-- <jsp:include page="UpdateFile.jsp"></jsp:include> --%>
-								<form style="margin-left: 28%;">
-									<table style="margin-right: 40%;">
-										<tr>
-											<td><input type="text" id="nam" name="name"
-												placeholder="name"></td>
-										</tr>
-										<tr>
-											<td><input type="email" id="mail" name="email"
-												onblur="validMail()" placeholder="email"></td>
-											<p id="p1" style="color: red"></p>
-										</tr>
-										<tr>
-											<td><textarea rows="4" cols="37" name="address"
-													placeholder="Address" id="Address" /></textarea></td>
-										</tr>
-										<tr>
-											<td><input type="number" id="phone" name="mobile"
-												placeholder="Mobile" onblur="validPhone()"></td>
-										</tr>
-										<tr>
-											<td><input type="number" id="age" name="Age" min="1"
-												max="150" placeholder="Age"></td>
-										</tr>
-										<tr>
-											<!-- employeeDetails -->
-											<td><input type="text" id="cname" name="Cname"
-												placeholder="Company name"></td>
-										</tr>
-										<tr>
-											<td><input type="text" id="gender" name="Gender"
-												placeholder="gender"></td>
-										</tr>
-										<tr>
-											<td><input type="text" id="language" name="Language"
-												placeholder="languageKnown"></td>
-										</tr>
-										<tr>
-											<td><input type="text" id="special" name="Special"
-												placeholder="Specialized"></td>
-										</tr>
-									</table>
+								<form style="margin-left: 28%;" class="form-horizontal">
+									<div>
+										<table style="margin-right: 40%; width: 100%" class="table">
+											<tr>
+												<td><input type="text" id="nam" name="name"
+													placeholder="name"></td>
+											</tr>
+											<tr>
+												<td><input type="email" id="mail" name="email"
+													onblur="validMail()" placeholder="email"></td>
+												<p id="p1" style="color: red"></p>
+											</tr>
+											<tr>
+												<td><textarea rows="4"  name="address"
+														 placeholder="Address" id="Address" /></textarea></td>
+											</tr>
+											<tr>
+												<td><input type="number" id="phone" name="mobile"
+													placeholder="Mobile" onblur="validPhone()"></td>
+											</tr>
+											<tr>
+												<td><input type="number" id="age" name="Age" min="1"
+													max="150" placeholder="Age"></td>
+											</tr>
+											<tr>
+												<!-- employeeDetails -->
+												<td><input type="text" id="cname" name="Cname"
+													placeholder="Company name"></td>
+											</tr>
+											<tr>
+												<td><input type="text" id="gender" name="Gender"
+													placeholder="gender"></td>
+											</tr>
+											<tr>
+												<td><input type="text" id="language" name="Language"
+													placeholder="languageKnown"></td>
+											</tr>
+											<tr>
+												<td><input type="text" id="special" name="Special"
+													placeholder="Specialized"></td>
+											</tr>
+										</table>
+									</div>
 								</form>
 
 							</div>
@@ -590,16 +414,19 @@ input[type="password"] {
 		</div>
 	</div>
 
-
-	<div class="modal fade" id="myModal1" role="dialog">
-		<div class="modal-dialog">
-			<div id="DeleteDiv">
-				<button type="button" class="btn btn-default" data-dismiss="modal"
+	
+	
+<div>
+	<div class="modal fade" id="myModal1" role="dialog" id="DeleteDiv">
+    	<div class="modal-dialog">
+    		<div class="modal-body">
+          		   <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 100%;"
 					onclick="deleteData()" id="ok">OK</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal"
+				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: 100%;"
 					id="close">Cancel</button>
-			</div>
-		</div>
+       		 </div>
+   		 </div>
 	</div>
+</div> 
 </body>
 </html>
