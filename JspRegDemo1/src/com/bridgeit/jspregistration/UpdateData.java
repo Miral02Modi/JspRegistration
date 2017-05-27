@@ -52,16 +52,13 @@ public class UpdateData extends HttpServlet {
 			preparedStatement.setString(6, gender);
 			preparedStatement.setString(7, lang);
 			preparedStatement.setString(8, special);
-			preparedStatement.executeUpdate();
-			 
-			/*RequestDispatcher dispatcher = request.getRequestDispatcher("employeeDetails");
-			dispatcher.include(request, response);*/
+			preparedStatement.executeUpdate();			 
 			response.sendRedirect("employeeDetails");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 
-		out.println("Saved");
+
 	}
 
 }

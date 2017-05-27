@@ -27,6 +27,7 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script
 	src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="js/EmployeeDetails.css">	 -->
 <style>
 .ui-mobile .ui-page {
 	min-height: 300px;
@@ -115,7 +116,21 @@ input[type="password"] {
 }
 </style>
 
-<script type="text/javascript">
+<script src=js/EmployeeDetails.js type="text/javascript">
+	
+
+
+
+/* 	function bodyHide() {
+		var x = document.getElementById('bodydata');
+	    if (x.style.display === 'none') {
+	        x.style.display = 'block';
+	    } else {
+	        x.style.display = 'none';
+	    }
+	}
+
+
 	var getData1 = function(name, email, address, mobile, cname, age, gender,
 			languageKnown, specialized) {
 
@@ -142,7 +157,7 @@ input[type="password"] {
 
 						"<tr>" + "<td>" + "Email Address"
 						+ " </td>" + "<td>" + email + "</td>" + "</tr>"
-						/* 	employeeDetails */
+						
 						+ "<tr>" + "<td>" + "Address" + "</td>"
 						+ "<td>" + address + "</td>" + "</tr>" 
 						
@@ -279,16 +294,15 @@ input[type="password"] {
 		}
 	}
 	
-	function navLoad(){
-	       window.location = 'EmployeeRegistration.jsp';
-	   }
 
+*/
 </script>
 
 </head>
 
 
-<script type="text/javascript" src="http://mydomain.com/xxxx.js"></script>
+<!-- <script type="text/javascript" src="http://mydomain.com/xxxx.js"></script> -->
+
 <!-- Navbar of boostrap -->
 <!-- <div class="container">
 	<div class="navBar" id="fixed">
@@ -315,7 +329,7 @@ input[type="password"] {
 	</nav>
 </div> -->
 
-
+<body id="bodydata">
 <div class="container">
 	<!-- <div class="navBar" id="fixed"> -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -328,12 +342,11 @@ input[type="password"] {
 					<li><a
 						style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
 						class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
-					<li><a href="registerEmployeeController">Register</a></li>
+					<li><a href="registerEmployeeController" onclick="bodyHide()">Register</a></li>
 				</ul>
 				<div>
 					<ul class="nav navbar-nav navbar-right">
-					 	<li><a href="login"
-						style="float: right;" onclick="navLoad()">Logout</a></li>
+						<li><a href="login" style="float: right;">Logout</a></li>
 					</ul>
 				</div>
 			</div>
@@ -486,7 +499,7 @@ input[type="password"] {
 											max="150" placeholder="Age"></td>
 									</tr>
 									<tr>
-										employeeDetails
+										<!-- employeeDetails -->
 										<td><input type="text" id="cname" name="Cname"
 											placeholder="Company name"></td>
 									</tr>

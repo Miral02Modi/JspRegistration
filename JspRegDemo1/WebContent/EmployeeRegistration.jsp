@@ -193,7 +193,7 @@ input[type="password"] {
 				<li><a
 					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
 					class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
-					<li><a href="EmployeeDetailController"
+					<li><a href="EmployeeDetailController" oncli
 						style="float: left;">Employee Detail</a></li>
 				</ul>
 			</div>
@@ -261,7 +261,6 @@ input[type="password"] {
 			</select> <br>
 			<button class="btn btn-lg btn-primary btn-block" type="submit"
 				onclick="validForm()" formaction="RegisterEmployee">Register</button>
-
 		</form>
 	</div>
 </body>
