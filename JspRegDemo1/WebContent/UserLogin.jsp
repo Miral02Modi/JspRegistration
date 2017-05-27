@@ -83,7 +83,7 @@ input[type="password"] {
 }
 </style>
 <script src="js/UserLogin.js" type="text/javascript">
- /* function validEmailId() {
+	/* function validEmailId() {
 		var email = document.getElementById('email').value;
 
 		if (email == "") {
@@ -144,10 +144,9 @@ input[type="password"] {
 						class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-				</ul>
-			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="LandingServlet">Login</a></li>
+			</ul>
 		</div>
 		</nav>
 	</div>

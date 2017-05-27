@@ -49,7 +49,7 @@
 					<%
 						//if (uid != null) {
 					%>
-					<li><a href="userreg">User Registration</a></li>
+					<li class="active"><a href="userreg">User Registration</a></li>
 					<%
 						//}
 					%>

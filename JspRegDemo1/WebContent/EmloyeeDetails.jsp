@@ -334,22 +334,18 @@ input[type="password"] {
 	<!-- <div class="navBar" id="fixed"> -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
-
-			<div class="collapse navbar-collapse">
-
-
 				<ul class="nav navbar-nav">
 					<li><a
 						style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
 						class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
-					<li><a href="registerEmployeeController" onclick="bodyHide()">Register</a></li>
+					<li class="active"><a href="registerEmployeeController" onclick="bodyHide()">Register</a></li>
 				</ul>
 				<div>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login" style="float: right;">Logout</a></li>
+						<li class="active"><a href="login" style="float: right;">Logout</a></li>
 					</ul>
 				</div>
-			</div>
+	
 		</div>
 	</nav>
 </div>

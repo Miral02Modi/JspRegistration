@@ -214,10 +214,10 @@ input[type="password"] {
 				onblur="return validEmail()" />
 			<p id="p2" style="color: red"></p>
 
-			<br> Passoword <input type="password" class="form-control"
+			<!-- <br> Passoword <input type="password" class="form-control"
 				name="password" placeholder="password" id="Password"
 				onblur="return validPassword()" />
-			<p id="p3" style="color: red"></p>
+			<p id="p3" style="color: red"></p> -->
 
 
 			<br>Mobile Number <input type="TEXT" class="form-control"
