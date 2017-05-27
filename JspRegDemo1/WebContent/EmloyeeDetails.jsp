@@ -15,17 +15,18 @@
 <link
 	href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
 	rel="stylesheet">
-	
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-	
+
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	
+
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
@@ -120,185 +121,184 @@ input[type="password"] {
 </style>
 
 <script src=js/EmployeeDetails.js type="text/javascript"></script>
-	
+
 
 <script>
+	/* 	function bodyHide() {
+	 var x = document.getElementById('bodydata');
+	 if (x.style.display === 'none') {
+	 x.style.display = 'block';
+	 } else {
+	 x.style.display = 'none';
+	 }
+	 }
 
-/* 	function bodyHide() {
-		var x = document.getElementById('bodydata');
-	    if (x.style.display === 'none') {
-	        x.style.display = 'block';
-	    } else {
-	        x.style.display = 'none';
-	    }
-	}
 
+	 var getData1 = function(name, email, address, mobile, cname, age, gender,
+	 languageKnown, specialized) {
 
-	var getData1 = function(name, email, address, mobile, cname, age, gender,
-			languageKnown, specialized) {
+	 console.log(age);
+	 $("#updateDiv").hide();
+	 $("#DeleteDiv").hide();
+	 $("#myPopup").show();
+	 $("#delete").show();
+	 $("#btn1").show();
+	 $("#btn2").show();
+	 $("#submit").hide();
+	 $("#ok").hide()
+	 $("#close").hide()
 
-		console.log(age);
-		$("#updateDiv").hide();
-		$("#DeleteDiv").hide();
-		$("#myPopup").show();
-		$("#delete").show();
-		$("#btn1").show();
-		$("#btn2").show();
-		$("#submit").hide();
-		$("#ok").hide()
-		$("#close").hide()
+	 $("#myPopup").text(name, email, address);
+	 $("#myPopup").html(
+	
+	 "<table class=table style=border-radius:8px;>"
 
-		$("#myPopup").text(name, email, address);
-		$("#myPopup").html(
-			
-				"<table class=table style=border-radius:8px;>"
+	 + "<tr>" + "<th>" + "Employee Data" + "<th>" + "</tr>"
 
-				+ "<tr>" + "<th>" + "Employee Data" + "<th>" + "</tr>"
+	 + "<tr>" + "<td>" + "EmployeeName" + " </td>"
+	 + "<td>" + name + "</td>" + "</tr>" +
 
-				+ "<tr>" + "<td>" + "EmployeeName" + " </td>"
-						+ "<td>" + name + "</td>" + "</tr>" +
+	 "<tr>" + "<td>" + "Email Address"
+	 + " </td>" + "<td>" + email + "</td>" + "</tr>"
+	
+	 + "<tr>" + "<td>" + "Address" + "</td>"
+	 + "<td>" + address + "</td>" + "</tr>" 
+	
+	 + "<tr>" + "<td>" + "mobile" + "</td>"
+	 + "<td>" + mobile + "</td>" + "</tr>" 	
+	 + "<tr>" + "<td>" + "cname" + "</td>"
+	 + "<td>" + cname + "</td>" + "</tr>" 
+	 + "<tr>" + "<td>" + "age" + "</td>"
+	 + "<td>" + age + "</td>" + "</tr>" 
+	 + "<tr>" + "<td>" + "gender" + "</td>"
+	 + "<td>" + gender + "</td>" + "</tr>" 
+	 + "<tr>" + "<td>" + "languageKnown" + "</td>"
+	 + "<td>" + languageKnown + "</td>" + "</tr>" 
+	 + "<tr>" + "<td>" + "specialized" + "</td>"
+	 + "<td>" + specialized + "</td>" + "</tr>" 
+	 + "</table>"
+	
+	
+	 );
 
-						"<tr>" + "<td>" + "Email Address"
-						+ " </td>" + "<td>" + email + "</td>" + "</tr>"
-						
-						+ "<tr>" + "<td>" + "Address" + "</td>"
-						+ "<td>" + address + "</td>" + "</tr>" 
-						
-						+ "<tr>" + "<td>" + "mobile" + "</td>"
-						+ "<td>" + mobile + "</td>" + "</tr>" 	
-						+ "<tr>" + "<td>" + "cname" + "</td>"
-						+ "<td>" + cname + "</td>" + "</tr>" 
-						+ "<tr>" + "<td>" + "age" + "</td>"
-						+ "<td>" + age + "</td>" + "</tr>" 
-						+ "<tr>" + "<td>" + "gender" + "</td>"
-						+ "<td>" + gender + "</td>" + "</tr>" 
-						+ "<tr>" + "<td>" + "languageKnown" + "</td>"
-						+ "<td>" + languageKnown + "</td>" + "</tr>" 
-						+ "<tr>" + "<td>" + "specialized" + "</td>"
-						+ "<td>" + specialized + "</td>" + "</tr>" 
-						+ "</table>"
-						
-						
-		);
+	 $("#nam").val(name);
+	 $("#mail").val(email);
+	 $("#Address").val(address);
+	 $("#phone").val(mobile);
+	 $("#cname").val(cname);
+	 $("#age").val(age);
+	 $("#gender").val(gender);
+	 $("#language").val(languageKnown);
+	
+	 $("#special").val(specialized);
 
-		$("#nam").val(name);
-		$("#mail").val(email);
-		$("#Address").val(address);
-		$("#phone").val(mobile);
-		$("#cname").val(cname);
-		$("#age").val(age);
-		$("#gender").val(gender);
-		$("#language").val(languageKnown);
-		
-		$("#special").val(specialized);
-
-	};
+	 };
 	
 	
 
-	var updateData = function() {
-		console.log('your message');
-		$("#myPopup").hide();
-		$("#updateDiv").show();
-		$("#submit").show();
-		$("#btn1").hide();
-		$("#btn2").hide();
-		$("#delete").hide();
-	}
+	 var updateData = function() {
+	 console.log('your message');
+	 $("#myPopup").hide();
+	 $("#updateDiv").show();
+	 $("#submit").show();
+	 $("#btn1").hide();
+	 $("#btn2").hide();
+	 $("#delete").hide();
+	 }
 
-	var updateData1 = function() {
+	 var updateData1 = function() {
 
-		var data = {};
+	 var data = {};
 
-		data.name = $("#nam").val();
-		data.email = $("#mail").val();
-		data.address = $("#Address").val();
-		data.phone = $("#phone").val();
-		data.cname = $("#cname").val();
-		data.age = $("#age").val();
-		data.gender = $("#gender").val();
-		data.language = $("#language").val();
-		data.special = $("#special").val();
+	 data.name = $("#nam").val();
+	 data.email = $("#mail").val();
+	 data.address = $("#Address").val();
+	 data.phone = $("#phone").val();
+	 data.cname = $("#cname").val();
+	 data.age = $("#age").val();
+	 data.gender = $("#gender").val();
+	 data.language = $("#language").val();
+	 data.special = $("#special").val();
 
-		$.ajax({
-			url : 'updateData',
-			data : data,
-			type : 'post',
-			success : function(data) {
-				//console.log(data);
-				$("#bodyId").html(data);
-			},
-			error : function() {
-				alert(error)
-			}
-		});
-	}
+	 $.ajax({
+	 url : 'updateData',
+	 data : data,
+	 type : 'post',
+	 success : function(data) {
+	 //console.log(data);
+	 $("#bodyId").html(data);
+	 },
+	 error : function() {
+	 alert(error)
+	 }
+	 });
+	 }
 
-	var deleteData = function() {
-		var email;
-		email = $("#mail").val();
-		console.log(email);
-		$.ajax({
-			url : 'DeleteData',
-			data : {
-				"mail" : email
-			},
-			type : 'post',
-			success : function(data) {
-				console.log(data);
-			},
-			error : function() {
-				alert("error Delete data");
-			}
-		});
-	}
+	 var deleteData = function() {
+	 var email;
+	 email = $("#mail").val();
+	 console.log(email);
+	 $.ajax({
+	 url : 'DeleteData',
+	 data : {
+	 "mail" : email
+	 },
+	 type : 'post',
+	 success : function(data) {
+	 console.log(data);
+	 },
+	 error : function() {
+	 alert("error Delete data");
+	 }
+	 });
+	 }
 
-	var delete1 = function() {
-		$("#DeleteDiv").show();
-		$("#ok").show();
-		$("#close").show();
+	 var delete1 = function() {
+	 $("#DeleteDiv").show();
+	 $("#ok").show();
+	 $("#close").show();
 
-	}
+	 }
 
-	function validMail() {
-		var email = document.getElementById('mail').value;
-		
-		var atpos = email.indexOf("@");
-	    var dotpos = email.lastIndexOf(".");
-	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-	        alert("Not a valid e-mail address");
-	        return false;
-	    }
-		
-		if (email == "") {
-			//alert('Please Enter First Name');
-			document.getElementById("p1").innerHTML = "*Please enter a email*";
-			document.getElementById("email").style.borderColor = "red";
-			return false;
-		} 
+	 function validMail() {
+	 var email = document.getElementById('mail').value;
 	
-		else {
-			document.getElementById("p1").innerHTML = "";
-			document.getElementById("email").style.borderColor = "green";
-			return true;
-		}
+	 var atpos = email.indexOf("@");
+	 var dotpos = email.lastIndexOf(".");
+	 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+	 alert("Not a valid e-mail address");
+	 return false;
+	 }
+	
+	 if (email == "") {
+	 //alert('Please Enter First Name');
+	 document.getElementById("p1").innerHTML = "*Please enter a email*";
+	 document.getElementById("email").style.borderColor = "red";
+	 return false;
+	 } 
+	
+	 else {
+	 document.getElementById("p1").innerHTML = "";
+	 document.getElementById("email").style.borderColor = "green";
+	 return true;
+	 }
 
-	}
+	 }
 	
 	
-	function validPhone(){
-		var number = document.getElementById('phone').value;
-		
-		if(/^\d{10}$/.test(number)){
-			
-		}else{
-			alert("Invalid number; must be ten digits")
-		    number.focus()
-		}
-	}
+	 function validPhone(){
+	 var number = document.getElementById('phone').value;
+	
+	 if(/^\d{10}$/.test(number)){
+	
+	 }else{
+	 alert("Invalid number; must be ten digits")
+	 number.focus()
+	 }
+	 }
 	
 
-*/
+	 */
 </script>
 
 </head>
@@ -332,9 +332,9 @@ input[type="password"] {
 	</nav>
 </div> -->
 
-<body id="bodydata">
-<div class="container">
-	<!-- <div class="navBar" id="fixed"> -->
+<body style="background-color: #bac9d6;">
+	<!-- <div class="container">
+	<div class="navBar" id="fixed">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 				<ul class="nav navbar-nav">
@@ -351,210 +351,255 @@ input[type="password"] {
 	
 		</div>
 	</nav>
-</div>
+</div> -->
 
 
+	<!-- 	<div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
+						class="navbar-brand" class="navbar-text;"
+					<li><a class="navbar-brand"	 href="#">Bridgelabz</a></li>
+				</div>
+				<ul class="nav navbar-nav">
 
-<div class="container content" style="margin-top: 58px;">
+					<li class="active"><a href="registerEmployeeController">Register</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="login"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+					</ul>
+				</ul>
+			</div>
+		</nav>
+	</div> -->
+
+	<div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand">Bridgelabz</p>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="registerEmployeeController">Register</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="login"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 
 
-	<!-- data-role="main" -->
-	<!-- class="ui-content" -->
-	<div class="row" style="background-color: #bac9d6;">
-		<!-- <div class="row"> -->
-		<div class="col-lg-4 col-sm-3"></div>
-		<!-- margin-left: 20%; -->
-		<div class="col-lg-4 col-sm-6">
-			<table class="table"
-				style="margin-top: 9%; box-shadow: 0 0 20px 0 rgba(20, 30, 0, 0.2), 20px 20px 20px 20px rgba(0, 0, 0, 0.24);">
+	<div class="container content" style="margin-top: 13%;">
 
-				<%
-					LinkedList linkedList = (LinkedList) request.getAttribute("EmployeeInformation");
 
-					String name = "";
-					String email = "";
-					String address = "";
-					String mobile = "";
-					String cname = "";
-					String age = "";
-					String gender = "";
-					String languageKnown = "";
-					String specialized = "";
-					int count = 0, index = 1;
-					for (int i = 0; i < linkedList.size(); i++) {
+		<!-- data-role="main" -->
+		<!-- class="ui-content" -->
+		<div class="row" style="background-color: #bac9d6;">
+			<!-- <div class="row"> -->
+			<div class="col-lg-4 col-sm-3"></div>
+			<!-- margin-left: 20%; -->
+			<div class="col-lg-4 col-sm-6">
+				<table class="table"
+					style="margin-top: 9%; box-shadow: 0 0 20px 0 rgba(20, 30, 0, 0.2), 20px 20px 20px 20px rgba(0, 0, 0, 0.24);">
 
-						Employee employee = (Employee) linkedList.get(i);
+					<%
+						LinkedList linkedList = (LinkedList) request.getAttribute("EmployeeInformation");
 
-						name = employee.getName();
-						email = employee.getMail();
-						address = employee.getAddress();
-						mobile = employee.getMobile();
-						cname = employee.getCname();
-						age = employee.getAge();
-						gender = employee.getGender();
-						languageKnown = employee.getLanguageKnown();
-						specialized = employee.getSpecialized();
-				%>
+						String name = "";
+						String email = "";
+						String address = "";
+						String mobile = "";
+						String cname = "";
+						String age = "";
+						String gender = "";
+						String languageKnown = "";
+						String specialized = "";
+						int count = 0, index = 1;
+						for (int i = 0; i < linkedList.size(); i++) {
 
-				<%
-					if (index == 1) {
-				%>
-				<thead
-					style="background: #337ab7; text-shadow: text-shadow: 2px 2px 5px white; color: white;">
-					<tr>
-						<th>#</th>
-						<th>Name</th>
-						<th>Email Id</th>
+							Employee employee = (Employee) linkedList.get(i);
+
+							name = employee.getName();
+							email = employee.getMail();
+							address = employee.getAddress();
+							mobile = employee.getMobile();
+							cname = employee.getCname();
+							age = employee.getAge();
+							gender = employee.getGender();
+							languageKnown = employee.getLanguageKnown();
+							specialized = employee.getSpecialized();
+					%>
+
+					<%
+						if (index == 1) {
+					%>
+					<thead
+						style="background: #337ab7; text-shadow: text-shadow: 2px 2px 5px white; color: white;">
+						<tr>
+							<th>#</th>
+							<th>Name</th>
+							<th>Email Id</th>
+						</tr>
+					</thead>
+					<%
+						}
+					%>
+					<%
+						if (count % 2 == 1) {
+					%>
+					<tr class="info">
+						<td style="color: black;"><%=index++%></td>
+						<td><a href="#myPopup" data-toggle="modal"
+							data-target="#myModal" style="color: black;"
+							data-position="<%=i%>"
+							onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=name%></a>
+						</td>
+
+						<td style="width: 1%;"><a href="#myPopup" data-toggle="modal"
+							data-target="#myModal" style="color: black;"
+							data-position="<%=i%>"
+							onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=email%></a>
+						</td>
 					</tr>
-				</thead>
-				<%
-					}
-				%>
-				<%
-					if (count % 2 == 1) {
-				%>
-				<tr class="info">
-					<td style="color: black;"><%=index++%></td>
-					<td><a href="#myPopup" data-toggle="modal"
-						data-target="#myModal" style="color: black;"
-						data-position="<%=i%>"
-						onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=name%></a>
-					</td>
 
-					<td style="width: 1%;"><a href="#myPopup" data-toggle="modal"
-						data-target="#myModal" style="color: black;"
-						data-position="<%=i%>"
-						onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=email%></a>
-					</td>
-				</tr>
+					<%
+						} else {
+					%>
+					<tr>
+						<td style="color: black; background-color: white;"><%=index++%></td>
+						<td style="background-color: white;"><a href="#myPopup"
+							data-toggle="modal" data-target="#myModal" style="color: black;"
+							data-position="<%=i%>"
+							onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=name%></a>
+						</td>
 
-				<%
-					} else {
-				%>
-				<tr>
-					<td style="color: black; background-color: white;"><%=index++%></td>
-					<td style="background-color: white;"><a href="#myPopup"
-						data-toggle="modal" data-target="#myModal" style="color: black;"
-						data-position="<%=i%>"
-						onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=name%></a>
-					</td>
+						<td style="width: 1%; background-color: white;"><a
+							href="#myPopup" data-toggle="modal" data-target="#myModal"
+							style="color: black;" data-position="<%=i%>"
+							onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=email%></a>
+						</td>
+					</tr>
 
-					<td style="width: 1%; background-color: white;"><a
-						href="#myPopup" data-toggle="modal" data-target="#myModal"
-						style="color: black;" data-position="<%=i%>"
-						onclick="getData1('<%=name%>','<%=email%>','<%=address%>','<%=mobile%>','<%=cname%>','<%=age%>','<%=gender%>','<%=languageKnown%>','<%=specialized%>')"><%=email%></a>
-					</td>
-				</tr>
+					<%
+						}
+							count++;
+						}
+					%>
 
-				<%
-					}
-						count++;
-					}
-				%>
-
-			</table>
+				</table>
 
 
 
 
 
-			<div class="modal fade" id="myModal" role="dialog">
-				<div class="modal-dialog modal-md">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								style="background-color: #f4a742">&times;</button>
-							<h4 class="modal-title">Employee Information</h4>
-						</div>
-						<div id="myPopup"></div>
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									style="background-color: #f4a742">&times;</button>
+								<h4 class="modal-title">Employee Information</h4>
+							</div>
+							<div id="myPopup"></div>
 
 
 
-						<!-- update popup design -->
+							<!-- update popup design -->
 
-						<div id="updateDiv" style="background-color: #ddd;">
-							<%-- <jsp:include page="UpdateFile.jsp"></jsp:include> --%>
-							<form style="margin-left: 28%;">
-								<table style="margin-right: 40%;">
-									<tr>
-										<td><input type="text" id="nam" name="name"
-											placeholder="name"></td>
-									</tr>
-									<tr>
-										<td><input type="email" id="mail" name="email"
-											onblur="validMail()" placeholder="email"></td>
-										<p id="p1" style="color: red"></p>
-									</tr>
-									<tr>
-										<td><textarea rows="4" cols="37" name="address"
-												placeholder="Address" id="Address" /></textarea></td>
-									</tr>
-									<tr>
-										<td><input type="number" id="phone" name="mobile"
-											placeholder="Mobile" onblur="validPhone()"></td>
-									</tr>
-									<tr>
-										<td><input type="number" id="age" name="Age" min="1"
-											max="150" placeholder="Age"></td>
-									</tr>
-									<tr>
-										<!-- employeeDetails -->
-										<td><input type="text" id="cname" name="Cname"
-											placeholder="Company name"></td>
-									</tr>
-									<tr>
-										<td><input type="text" id="gender" name="Gender"
-											placeholder="gender"></td>
-									</tr>
-									<tr>
-										<td><input type="text" id="language" name="Language"
-											placeholder="languageKnown"></td>
-									</tr>
-									<tr>
-										<td><input type="text" id="special" name="Special"
-											placeholder="Specialized"></td>
-									</tr>
-								</table>
-							</form>
+							<div id="updateDiv" style="background-color: #ddd;">
+								<%-- <jsp:include page="UpdateFile.jsp"></jsp:include> --%>
+								<form style="margin-left: 28%;">
+									<table style="margin-right: 40%;">
+										<tr>
+											<td><input type="text" id="nam" name="name"
+												placeholder="name"></td>
+										</tr>
+										<tr>
+											<td><input type="email" id="mail" name="email"
+												onblur="validMail()" placeholder="email"></td>
+											<p id="p1" style="color: red"></p>
+										</tr>
+										<tr>
+											<td><textarea rows="4" cols="37" name="address"
+													placeholder="Address" id="Address" /></textarea></td>
+										</tr>
+										<tr>
+											<td><input type="number" id="phone" name="mobile"
+												placeholder="Mobile" onblur="validPhone()"></td>
+										</tr>
+										<tr>
+											<td><input type="number" id="age" name="Age" min="1"
+												max="150" placeholder="Age"></td>
+										</tr>
+										<tr>
+											<!-- employeeDetails -->
+											<td><input type="text" id="cname" name="Cname"
+												placeholder="Company name"></td>
+										</tr>
+										<tr>
+											<td><input type="text" id="gender" name="Gender"
+												placeholder="gender"></td>
+										</tr>
+										<tr>
+											<td><input type="text" id="language" name="Language"
+												placeholder="languageKnown"></td>
+										</tr>
+										<tr>
+											<td><input type="text" id="special" name="Special"
+												placeholder="Specialized"></td>
+										</tr>
+									</table>
+								</form>
 
-						</div>
+							</div>
 
-						<div class="modal-footer" id="footer">
+							<div class="modal-footer" id="footer">
 
-							<button type="button" class="btn btn-default" id="btn1"
-								style="width: 100px; margin: 0px 5px; float: left;"
-								onclick="updateData()">Update</button>
+								<button type="button" class="btn btn-default" id="btn1"
+									style="width: 100px; margin: 0px 5px; float: left;"
+									onclick="updateData()">Update</button>
 
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal" id="btn2"
-								style="width: 100px; margin: 0px 5px; float: left;">Close</button>
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal" id="btn2"
+									style="width: 100px; margin: 0px 5px; float: left;">Close</button>
 
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal" data-toggle="modal" data-target="#myModal1"
-								id="delete" onclick="delete1()" data-dismiss="modal"
-								style="width: 100px; margin: 0px 5px; float: left;">Delete</button>
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal" data-toggle="modal"
+									data-target="#myModal1" id="delete" onclick="delete1()"
+									data-dismiss="modal"
+									style="width: 100px; margin: 0px 5px; float: left;">Delete</button>
 
-							<button type="button" class="btn btn-default"
-								onclick="updateData1()" id="submit" data-dismiss="modal"
-								style="width: 100px; margin-left: 5px;">submit</button>
+								<button type="button" class="btn btn-default"
+									onclick="updateData1()" id="submit" data-dismiss="modal"
+									style="width: 100px; margin-left: 5px;">submit</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
-<div class="modal fade" id="myModal1" role="dialog">
-	<div class="modal-dialog">
-		<div id="DeleteDiv">
-			<button type="button" class="btn btn-default" data-dismiss="modal"
-				onclick="deleteData()" id="ok">OK</button>
-			<button type="button" class="btn btn-default" data-dismiss="modal"
-				id="close">Cancel</button>
+	<div class="modal fade" id="myModal1" role="dialog">
+		<div class="modal-dialog">
+			<div id="DeleteDiv">
+				<button type="button" class="btn btn-default" data-dismiss="modal"
+					onclick="deleteData()" id="ok">OK</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal"
+					id="close">Cancel</button>
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
