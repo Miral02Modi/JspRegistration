@@ -19,7 +19,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-
+<link rel="stylesheet" type="text/css" href="css/EmployeeDetails.css">
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script
@@ -31,7 +31,8 @@
 <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <!-- <link rel="stylesheet" type="text/css" href="js/EmployeeDetails.css">	 -->
 
-<style>
+
+<!-- <style>
 .ui-mobile .ui-page {
 	min-height: 300px;
 	background-color: #bac9d6;
@@ -118,7 +119,7 @@ input[type="password"] {
 .content {
 	margin-top: 30%;
 }
-</style>
+</style> -->
 
 <script src=js/EmployeeDetails.js type="text/javascript"></script>
 </head>
@@ -153,47 +154,7 @@ input[type="password"] {
 </div> -->
 
 <body style="background-color: #bac9d6;">
-	<!-- <div class="container">
-	<div class="navBar" id="fixed">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-				<ul class="nav navbar-nav">
-					<li><a
-						style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
-						class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
-					<li class="active"><a href="registerEmployeeController">Register</a></li>
-				</ul>
-				<div>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="login" style="float: right;">Logout</a></li>
-					</ul>
-				</div>
-	
-		</div>
-	</nav>
-</div> -->
 
-
-	<!-- 	<div>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
-						class="navbar-brand" class="navbar-text;"
-					<li><a class="navbar-brand"	 href="#">Bridgelabz</a></li>
-				</div>
-				<ul class="nav navbar-nav">
-
-					<li class="active"><a href="registerEmployeeController">Register</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
-					</ul>
-				</ul>
-			</div>
-		</nav>
-	</div> -->
 
 	<div>
 		<nav class="navbar navbar-inverse navbar-fixed-top" style="height:1%">
@@ -211,7 +172,7 @@ input[type="password"] {
 						<li><a href="registerEmployeeController">Register</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span
+						<li><a href="LogoutUser"><span
 								class="glyphicon glyphicon-user"></span>Logout</a></li>
 					</ul>
 				</div>

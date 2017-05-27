@@ -145,7 +145,7 @@ input[type="password"] {
 				</button>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="LandingServlet">Login</a></li>
+				<li class="active"><a href="login">Login</a></li>
 			</ul>
 		</div>
 		</nav>

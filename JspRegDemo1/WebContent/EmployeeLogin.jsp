@@ -102,7 +102,7 @@ input[type="password"] {
 </script>
 </head>
 <body>
-
+	<jsp:include page="Header.jsp"></jsp:include>
 	<!-- <div class="row">
 		<div class="col-lg-4"></div> -->
 		<div>

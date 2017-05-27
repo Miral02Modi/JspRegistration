@@ -18,16 +18,16 @@ public class LogoutUser extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		//PrintWriter out = response.getWriter();  
-        //HttpSession session = request.getSession(); 
+       HttpSession session = request.getSession(); 
       /*  System.out.println("before "+session);
         System.out.println("uid "+request.getAttribute("uid"));*/
         
-        //session.invalidate();
+        session.invalidate();
         
         /*System.out.println("after "+session);
         System.out.println("uid "+request.getAttribute("uid"));*/
         
-        //session = request.getSession();	
+        session = request.getSession();	
         response.sendRedirect("login");
         
         //out.print("You are successfully logged out!");  

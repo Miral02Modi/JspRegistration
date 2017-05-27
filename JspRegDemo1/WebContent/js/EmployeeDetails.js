@@ -96,6 +96,7 @@ var getData1 = function(name, email, address, mobile, cname, age, gender, langua
 			type : 'post',
 			success : function(data) {
 				//console.log(data);
+				alert(data);
 				$("#bodyId").html(data);
 			},
 			error : function() {

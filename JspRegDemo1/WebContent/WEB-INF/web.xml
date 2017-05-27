@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>JspRegDemo1</display-name>
   <welcome-file-list>
-    <welcome-file>LandingServlet</welcome-file>
+    <welcome-file>login</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>LoginEmployee</servlet-name>
@@ -119,16 +119,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LandingServlet</servlet-name>
-    <url-pattern>/LandingServlet</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>loginjsp</servlet-name>
-    <jsp-file>/user_reg.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>loginjsp</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
- 
 </web-app>
