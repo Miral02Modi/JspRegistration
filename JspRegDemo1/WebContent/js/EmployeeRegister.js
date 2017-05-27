@@ -1,18 +1,3 @@
-function validForm() {
-	var name = validName();
-	var email = validEmail();
-	var password = validPassword();
-	var phone = validPhone();
-	var address = validAddress();
-	var comapnyName = validCompanyName();
-	var age = validAge();
-	if (name == true && email == true && password == true && phone == true
-			&& address == true && comapnyName == true && age == true) {
-		return true;
-	}
-	return false;
-}
-
 function validName() {
 	var name = document.getElementById("Name").value;
 
@@ -121,4 +106,19 @@ function validAge() {
 
 function make_blank() {
 	document.getElementById("Name").value = "";
+}
+
+function validForm() {
+	var name = validName();
+	var email = validEmail();
+	var password = validPassword();
+	var phone = validPhone();
+	var address = validAddress();
+	var comapnyName = validCompanyName();
+	var age = validAge();
+	if (name == true && email == true && password == true && phone == true
+			&& address == true && comapnyName == true && age == true) {
+		return true;
+	}
+	return false;
 }

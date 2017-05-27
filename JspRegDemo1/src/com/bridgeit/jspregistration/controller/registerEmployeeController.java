@@ -16,12 +16,14 @@ public class registerEmployeeController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeRegistration.jsp");
-		dispatcher.include(request, response);
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeRegistration.jsp");
+		dispatcher.forward(request, response);*/
+		doPost(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeRegistration.jsp");
-		dispatcher.include(request, response);
+		System.out.println("Inside the Controler");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/EmployeeRegistration.jsp");
+		dispatcher.forward(request, response);
 	}
 }

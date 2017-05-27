@@ -5,12 +5,10 @@ function bodyHide() {
 	    } else {
 	        x.style.display = 'none';
 	    }
-	}
+}
 
 
-	var getData1 = function(name, email, address, mobile, cname, age, gender,
-			languageKnown, specialized) {
-
+var getData1 = function(name, email, address, mobile, cname, age, gender, languageKnown, specialized) {
 		console.log(age);
 		$("#updateDiv").hide();
 		$("#DeleteDiv").hide();
@@ -66,10 +64,8 @@ function bodyHide() {
 		
 		$("#special").val(specialized);
 
-	};
+};
 	
-	
-
 	var updateData = function() {
 		console.log('your message');
 		$("#myPopup").hide();

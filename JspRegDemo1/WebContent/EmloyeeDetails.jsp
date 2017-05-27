@@ -11,23 +11,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Insert title here</title>
+
 <link
 	href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
 	rel="stylesheet">
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script
-	src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+	
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <!-- <link rel="stylesheet" type="text/css" href="js/EmployeeDetails.css">	 -->
+
 <style>
 .ui-mobile .ui-page {
 	min-height: 300px;
@@ -116,10 +119,10 @@ input[type="password"] {
 }
 </style>
 
-<script src=js/EmployeeDetails.js type="text/javascript">
+<script src=js/EmployeeDetails.js type="text/javascript"></script>
 	
 
-
+<script>
 
 /* 	function bodyHide() {
 		var x = document.getElementById('bodydata');
@@ -338,7 +341,7 @@ input[type="password"] {
 					<li><a
 						style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
 						class="navbar-brand" class="navbar-text;" href="#"><em>Bridgelabz</em></a></li>
-					<li class="active"><a href="registerEmployeeController" onclick="bodyHide()">Register</a></li>
+					<li class="active"><a href="registerEmployeeController">Register</a></li>
 				</ul>
 				<div>
 					<ul class="nav navbar-nav navbar-right">
