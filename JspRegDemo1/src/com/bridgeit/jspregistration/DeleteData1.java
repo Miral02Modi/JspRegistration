@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,8 +35,7 @@ public class DeleteData1 extends HttpServlet {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		PrintWriter out = response.getWriter();
-		out.println("Saved");
+		response.sendRedirect("employeeDetails");
 	}
 }
 

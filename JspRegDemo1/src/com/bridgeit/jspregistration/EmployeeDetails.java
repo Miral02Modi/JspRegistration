@@ -24,10 +24,9 @@ public class EmployeeDetails extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession httpSession = req.getSession(false);
 		Integer uid = (Integer) httpSession.getAttribute("uid");
-		System.out.println(uid);
+		System.out.println("UserId::"+uid);
 		if (uid != null)
 			performTask(req, resp);
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -85,7 +84,6 @@ public class EmployeeDetails extends HttpServlet {
 			Integer uid1 = (Integer) httpSession.getAttribute("uid");
 			LinkedList<Employee> linkedList = new LinkedList<Employee>();
 
-			System.out.println("User identity::" + uid1);
 			if (httpSession != null) {
 				String select = "Select * from JspRegistration.EmployeeReg where uid =" + uid1 + " ORDER BY age asc";
 				try {

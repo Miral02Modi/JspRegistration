@@ -26,138 +26,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-<!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-<!-- <link rel="stylesheet" type="text/css" href="js/EmployeeDetails.css">	 -->
-
-
-<!-- <style>
-.ui-mobile .ui-page {
-	min-height: 300px;
-	background-color: #bac9d6;
-}
-
-.h4, h4 {
-	text-align: center;
-	font-size: 18px;
-}
-
-.modal-header {
-	padding: 15px;
-	border-bottom: 1px solid #e5e5e5;
-	background-color: #f4a742;
-}
-
-.modal-footer {
-	padding: 15px;
-	text-align: right;
-	border-top: 1px solid #e5e5e5;
-	background-color: #f4a742;
-}
-
-.wrapper {
-	margin-top: 80px;
-	margin-bottom: 80px;
-}
-
-.form-signin {
-	max-width: 380px;
-	padding: 15px 35px 45px;
-	margin: 0 auto;
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 40px 40px 0
-		rgba(0, 0, 0, 0.24);
-}
-
-.form-signin-heading, .checkbox {
-	margin-bottom: 30px;
-}
-
-.form-control {
-	position: relative;
-	font-size: 16px;
-	height: auto;
-	padding: 10px;
-	@
-	include
-	box-sizing(border-box);
-	&:
-	focus
-	{
-	z-index
-	:
-	2;
-}
-
-}
-input[type="text"] {
-	margin-bottom: -1px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-input[type="password"] {
-	margin-bottom: 20px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-
-}
-.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a
-	{
-	color: #38c;
-	font-weight: 700;
-}
-
-.container {
-	width: 100%;
-	background-color: #519ad6;
-}
-
-.content {
-	margin-top: 30%;
-}
-</style> -->
 
 <script src=js/EmployeeDetails.js type="text/javascript"></script>
 </head>
-
-
-<!-- <script type="text/javascript" src="http://mydomain.com/xxxx.js"></script> -->
-
-<!-- Navbar of boostrap -->
-<!-- <div class="container">
-	<div class="navBar" id="fixed">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				
-				<a
-					style="font-family: verdana; color: white; text-shadow: 5px 5px 10px blue;"
-					class="navbar-brand navbar-text;" href="#">Bridgelabz</a>
-				<a href="registerEmployeeController"
-					style="text-decoration: none;color:white;font-weight: 0px" class="navbar-brand" >Registration</a>
-					
-	
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				
-				<ul class="collapse navbar-collapse">
-						<li><a href="login" style="color: white; float: right; font-weight: 0px;" class="navbar-brand"
-					onclick="navLoad()">Logout</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-</div> -->
-
-<body style="background-color: #bac9d6;">
-
-
+<body style="background-color: #bac9d6;" id="bodyId">
 	<div>
-		<nav class="navbar navbar-inverse navbar-fixed-top" style="height:1%">
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="height: 1%">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -195,7 +69,7 @@ input[type="password"] {
 					style="margin-top: 9%; box-shadow: 0 0 20px 0 rgba(20, 30, 0, 0.2), 20px 20px 20px 20px rgba(0, 0, 0, 0.24);">
 
 					<%
-						LinkedList linkedList = (LinkedList) request.getAttribute("EmployeeInformation");
+						LinkedList<Employee> linkedList = (LinkedList) request.getAttribute("EmployeeInformation");
 
 						String name = "";
 						String email = "";
@@ -303,7 +177,7 @@ input[type="password"] {
 								<%-- <jsp:include page="UpdateFile.jsp"></jsp:include> --%>
 								<form style="margin-left: 28%;" class="form-horizontal">
 									<div>
-										<table style="margin-right: 40%; width: 100%" class="table">
+										<table style="margin-right: 40%; width: 100%;border: 0" class="table">
 											<tr>
 												<td><input type="text" id="nam" name="name"
 													placeholder="name"></td>
@@ -314,8 +188,8 @@ input[type="password"] {
 												<p id="p1" style="color: red"></p>
 											</tr>
 											<tr>
-												<td><textarea rows="4"  name="address"
-														 placeholder="Address" id="Address" /></textarea></td>
+												<td><textarea rows="4" name="address"
+														placeholder="Address" id="Address" /></textarea></td>
 											</tr>
 											<tr>
 												<td><input type="number" id="phone" name="mobile"
@@ -354,19 +228,22 @@ input[type="password"] {
 									style="width: 100px; margin: 0px 5px; float: left;"
 									onclick="updateData()">Update</button>
 
-								<button type="button" class="btn btn-default"
+								<!-- <button type="button" class="btn btn-default"
 									data-dismiss="modal" id="btn2"
-									style="width: 100px; margin: 0px 5px; float: left;">Close</button>
+									style="width: 100px; margin: 0px 5px; float: left;">Close</button> -->
 
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal" data-toggle="modal"
 									data-target="#myModal1" id="delete" onclick="delete1()"
-									data-dismiss="modal"
+									data-dismiss="modal" 
 									style="width: 100px; margin: 0px 5px; float: left;">Delete</button>
 
 								<button type="button" class="btn btn-default"
 									onclick="updateData1()" id="submit" data-dismiss="modal"
 									style="width: 100px; margin-left: 5px;">submit</button>
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal" style="float: left;">Cancel</button>
+
 							</div>
 						</div>
 					</div>
@@ -375,19 +252,19 @@ input[type="password"] {
 		</div>
 	</div>
 
-	
-	
-<div>
-	<div class="modal fade" id="myModal1" role="dialog" id="DeleteDiv">
-    	<div class="modal-dialog">
-    		<div class="modal-body">
-          		   <button type="button" class="btn btn-default" data-dismiss="modal" style="width: 100%;"
-					onclick="deleteData()" id="ok">OK</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal" style="width: 100%;"
-					id="close">Cancel</button>
-       		 </div>
-   		 </div>
+
+
+	<div>
+		<div class="modal fade" id="myModal1" role="dialog" id="DeleteDiv">
+			<div class="modal-dialog">
+				<div class="modal-body">
+					<button type="button" class="btn btn-default" data-dismiss="modal"
+						style="width: 100%;" onclick="deleteData()" id="ok">OK</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"
+						style="width: 100%;" id="close">Cancel</button>
+				</div>
+			</div>
+		</div>
 	</div>
-</div> 
 </body>
 </html>

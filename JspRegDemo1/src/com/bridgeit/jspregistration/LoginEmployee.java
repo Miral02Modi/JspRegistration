@@ -53,7 +53,7 @@ public class LoginEmployee extends HttpServlet {
 				}
 			}
 
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("LandingServlet");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("login");
 			requestDispatcher.forward(request, response);
 			
 		} catch (ClassNotFoundException e) {

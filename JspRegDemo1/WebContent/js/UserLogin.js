@@ -1,5 +1,12 @@
 function validEmailId() {
 		var email = document.getElementById('email').value;
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+		if (reg.test(email) == false) {
+			document.getElementById("email").style.borderColor = "red";
+			document.getElementById("p1").innerHTML = "*Please enter a valid email*";
+			return false;
+		}
 
 		if (email == "") {
 			//alert('Please Enter First Name');

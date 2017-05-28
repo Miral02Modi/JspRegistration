@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.omg.CORBA.Request;
 
@@ -25,15 +26,19 @@ public class LandingServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Integer uid = (Integer) request.getAttribute("uid");
-		System.out.println(uid);
-		if(uid != null){	
-			response.sendRedirect("employeeDetails");
-		return;
+		HttpSession httpSession = request.getSession();
+		Integer uid = (Integer) httpSession.getAttribute("uid");
+		System.out.println("Inside landing page::"+uid);
+		if (uid == null) {
+			//response.sendRedirect("employeeDetails");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeLogin.jsp");
+			dispatcher.forward(request, response);
+			return;
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeLogin.jsp");
-		dispatcher.forward(request, response);
-		
-	}	
+
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeLogin.jsp");
+		dispatcher.forward(request, response);*/
+
+	}
 
 }

@@ -95,8 +95,6 @@ var getData1 = function(name, email, address, mobile, cname, age, gender, langua
 			data : data,
 			type : 'post',
 			success : function(data) {
-				//console.log(data);
-				alert(data);
 				$("#bodyId").html(data);
 			},
 			error : function() {
@@ -111,12 +109,12 @@ var getData1 = function(name, email, address, mobile, cname, age, gender, langua
 		console.log(email);
 		$.ajax({
 			url : 'DeleteData',
+			type : 'post',
 			data : {
 				"mail" : email
 			},
-			type : 'post',
 			success : function(data) {
-				console.log(data);
+				$("#bodyId").html(data);
 			},
 			error : function() {
 				alert("error Delete data");
@@ -134,6 +132,7 @@ var getData1 = function(name, email, address, mobile, cname, age, gender, langua
 	function validMail() {
 		var email = document.getElementById('mail').value;
 		
+		
 		var atpos = email.indexOf("@");
 	    var dotpos = email.lastIndexOf(".");
 	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
@@ -147,7 +146,7 @@ var getData1 = function(name, email, address, mobile, cname, age, gender, langua
 			document.getElementById("email").style.borderColor = "red";
 			return false;
 		} 
-	
+		
 		else {
 			document.getElementById("p1").innerHTML = "";
 			document.getElementById("email").style.borderColor = "green";

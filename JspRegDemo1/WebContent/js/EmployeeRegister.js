@@ -6,8 +6,7 @@ function validName() {
 		document.getElementById("p1").innerHTML = "*Please enter a Name*";
 		return false;
 	} else {
-		document.getElementById("Name").style.borderColor = rgba(0, 0, 0,
-				.25);
+		document.getElementById("Name").style.borderColor = "green";
 		document.getElementById("p1").innerHTML = "";
 		return true;
 	}
@@ -16,17 +15,23 @@ function validName() {
 
 function validEmail() {
 	var email = document.getElementById("email").value;
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+	if (reg.test(email) == false) {
+		document.getElementById("email").style.borderColor = "red";
+		document.getElementById("p2").innerHTML = "*Please enter a valid email*";
+		return false;
+	}
 
 	if (email == "") {
 		document.getElementById("email").style.borderColor = "red";
 		document.getElementById("p2").innerHTML = "*Please enter a email*";
 		return false;
-	} else {
-		document.getElementById("email").style.borderColor = rgba(0, 0, 0,
-				.25);
-		document.getElementById("p2").innerHTML = "";
-		return true;
 	}
+	document.getElementById("email").style.borderColor = "green";
+	document.getElementById("p2").innerHTML = "";
+	return true;
+
 }
 
 function validPassword() {
@@ -37,8 +42,7 @@ function validPassword() {
 		document.getElementById("p3").innerHTML = "*Please enter a Password*";
 		return false;
 	} else {
-		document.getElementById("Password").style.borderColor = rgba(0, 0,
-				0, .25);
+		document.getElementById("Password").style.borderColor = "green";
 		document.getElementById("p3").innerHTML = "";
 		return true;
 	}
@@ -47,16 +51,26 @@ function validPassword() {
 function validPhone() {
 
 	var phone = document.getElementById("Phone").value;
+
 	if (phone == "") {
 		document.getElementById("Phone").style.borderColor = "red";
 		document.getElementById("p4").innerHTML = "*Please enter a Mobile Number*";
 		return false;
-	} else {
-		document.getElementById("Phone").style.borderColor = rgba(0, 0, 0,
-				.25);
-		document.getElementById("p4").innerHTML = "";
-		return true;
 	}
+	
+	
+	if (/^\d{10}$/.test(phone) == false) {
+		document.getElementById("Phone").style.borderColor = "red";
+		document.getElementById("p4").innerHTML = "*Please enter the 10 Digit Number*";
+		return false;
+	}
+	
+	
+	
+	document.getElementById("Phone").style.borderColor = "green";
+	document.getElementById("p4").innerHTML = "";
+	return true;
+
 }
 
 function validAddress() {
@@ -68,8 +82,7 @@ function validAddress() {
 		document.getElementById("p5").innerHTML = "*Please enter a Address*";
 		return false;
 	} else {
-		document.getElementById("Address").style.borderColor = rgba(0, 0,
-				0, .25);
+		document.getElementById("Address").style.borderColor = "green";
 		document.getElementById("p5").innerHTML = "";
 		return true;
 	}
@@ -82,8 +95,7 @@ function validCompanyName() {
 		document.getElementById("p6").innerHTML = "*Please enter a Company Name*";
 		return false;
 	} else {
-		document.getElementById("Cname").style.borderColor = rgba(0, 0, 0,
-				.25);
+		document.getElementById("Cname").style.borderColor = "green";
 		document.getElementById("p6").innerHTML = "";
 		return true;
 	}
@@ -97,8 +109,7 @@ function validAge() {
 		document.getElementById("p7").innerHTML = "*Please enter a Age*";
 		return false;
 	} else {
-		document.getElementById("Age").style.borderColor = rgba(0, 0, 0,
-				.25);
+		document.getElementById("Age").style.borderColor = "green";
 		document.getElementById("p7").innerHTML = "";
 		return true;
 	}
